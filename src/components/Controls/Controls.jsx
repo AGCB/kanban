@@ -1,5 +1,6 @@
 import React from 'react';
 import SelectedInput from '../SelectedInput/';
+import './controls.css';
 
 const Controls = ({
   tasks,
@@ -45,20 +46,18 @@ const Controls = ({
     stage = filteredTasks[0].stage;
   }
   return (
-    <div style={{'border': '3px solid orange'}}>
+    <div className="controls">
 
       <form onSubmit={(e) => {
           e.preventDefault();
           handleFormSubmit();
         }}>
         <input
-          style={{'width': '300px'}}
           onFocus={(e) => setInput('')}
           onChange={(e) => handleInputChange(e)}
           value={input}/>
         <button type="submit"> addTask</button>
       </form>
-      <span>--</span>
 
       <SelectedInput value={selectedInput} currentStage = {stage}/>
       <button

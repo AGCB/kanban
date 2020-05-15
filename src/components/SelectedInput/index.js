@@ -1,14 +1,11 @@
 import React from 'react';
+import './selected-input.css';
 
 const SelectedInput = ({value, currentStage}) => {
   return (
-    <div style={{'display': 'flex',
-      'flexDirection': 'column',
-      'margin': '30px',
-      'fontSize': '30px'}}>
-      <span>{`selected input...${value}..`}</span>
-      <span>{'(click on specific tasks to update)'}</span>
-      <span>{`it's currently at stage-${currentStage} `}</span>
+    <div className="selected-input">
+      <span>{`entry ${value}..`}</span>
+      <span>{`stage-${currentStage} `}</span>
     </div>
   )
 }

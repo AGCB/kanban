@@ -1,8 +1,18 @@
 .App {
-  color: blue;
+  color: rgb(30,210,200);
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
   background-color: black;
+}
+
+.kanban {
+  display: flex;
+  justifyContent: space-around;
+  margin: 30px;
 }

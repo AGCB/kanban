@@ -53,13 +53,7 @@ function App() {
         selectedInput={selectedInput}
         setSelectedInput={setSelectedInput}
         deleteSelectedEntry = {deleteSelectedEntry}/>
-      <div
-        style={{
-          'display': 'flex',
-          'justifyContent': 'space-around',
-          'margin': '30px',
-        }}>
-
+      <div className="kanban">
         {
           ['icebox', 'progress', 'done'].map((stage,i) => {
             return (
