@@ -12,7 +12,7 @@ function App() {
     {value:'fiz', stage: 3},
   ];
   const [ tasks, setTasks ] = React.useState(defaultTasks);
-  const [ selectedInput, setSelectedInput ] = React.useState('foo')
+  const [ selectedInput, setSelectedInput ] = React.useState('')
   // helpers
   const handleMoveTask = (e, direction,input) => {
     e.preventDefault();
@@ -57,7 +57,7 @@ function App() {
         {
           ['icebox', 'progress', 'done'].map((stage,i) => {
             return (
-              <span key={i}>{stage}</span>
+              <span style={{"color":"yellow"}}key={i}>{stage}</span>
             )
           })
         }

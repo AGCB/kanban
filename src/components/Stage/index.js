@@ -1,16 +1,16 @@
 import React from 'react';
+import './stage.css';
 
 const Stage = ({tasks, name, setSelectedTask}) => {
   const customColor = name === 'icebox' ? 'red' : name === 'progress' ? 'purple':'yellow'
   return (
-    <div style={{'color': customColor, 'display': 'flex', 'flexDirection': 'column'}}>
+    <div className="stage">
     {
       tasks.map((task, i) => {
         return <span
-          style={{
-            'height': '30px',
-            'border': '3px solid grey',
-          }}key={i} onClick={(e) => {
+          className="task"
+          key={i}
+          onClick={(e) => {
             e.preventDefault();
             setSelectedTask(task.value)
           }}>{task.value}</span>

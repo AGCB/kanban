@@ -1,0 +1,10 @@
+.task {
+  margin-bottom: 10px;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

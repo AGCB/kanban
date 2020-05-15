@@ -4,8 +4,8 @@ import './selected-input.css';
 const SelectedInput = ({value, currentStage}) => {
   return (
     <div className="selected-input">
-      <span>{`entry ${value}..`}</span>
-      <span>{`stage-${currentStage} `}</span>
+      <span>{`${value? 'Entry':''} ${value}..`}</span>
+      <span>{`${value? 'stage':''}..${currentStage} `}</span>
     </div>
   )
 }
